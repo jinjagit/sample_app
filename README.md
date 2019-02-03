@@ -43,7 +43,7 @@ For more information, see the
 
 ## Issues, observations & workarounds
 
-1. Initial Heroku deploy failed, with error "You must use Bundler 2 or greater with this lockfile", even though I _had_ used bundler 2.0.1 to run <code>bundle install -- without production</code>. Fix: delete Heroku app, delete local rails app, and delete respective GitHub repository, then uninstall bundler / reinstall version 1.17.3, then work through tutorial again, up to, and beyond, Heroku deploy. On further investigation, I discovered this happens because Heroku uses Bundler v1.15.2. I also found I needed to remove the bundler 2.0.1 I had installed from my default gems for the rbenv rails version i am using for this app, which involved locating the specific gemspec file and moving out of the active folder.
+1. Initial Heroku deploy failed, with error "You must use Bundler 2 or greater with this lockfile", even though I _had_ used bundler 2.0.1 to run <code>bundle install -- without production</code>. Fix: delete Heroku app, delete local rails app, and delete respective GitHub repository, then uninstall bundler / reinstall version 1.17.3, then work through tutorial again, up to, and beyond, Heroku deploy. On further investigation, I discovered this happens because Heroku uses Bundler v1.15.2. I also found I needed to remove the bundler 2.0.1 I had installed from my default gems for the rbenv rails version i am using for this app, which involved locating the specific gemspec file and moving it out of the active folder.
 
   * Alternatively, I could have followed these instructions from the Odin course, [Your First Rails App](https://www.theodinproject.com/courses/web-development-101/lessons/your-first-rails-application):
 
