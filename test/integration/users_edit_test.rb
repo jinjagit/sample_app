@@ -37,7 +37,6 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_equal name,  @user.name
     assert_equal email, @user.email
     # check fowarding cleared after new login:
-    log_out
     log_in_as(@user)
     assert session[:forwarding_url].nil?
   end
